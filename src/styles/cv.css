@@ -1,0 +1,36 @@
+.cv-layout h1,
+.cv-layout h2,
+.cv-layout h3 {
+  color: var(--color-highlight-blastoise);  
+}
+
+.cv-layout h1:first-of-type {
+  margin-bottom: 0;
+}
+
+.cv-layout h1 + h4 {
+  margin-top: 0;
+  margin-bottom: var(--space-unit-xs);
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.cv-layout h2 + h3 {
+  margin-top: var(--space-unit-6q);
+}
+
+.cv-layout h3 {
+  margin-bottom: var(--space-unit-xs);
+}
+
+.cv-layout h3 + p {
+  margin-bottom: var(--space-unit-sm);
+}
+
+.cv-layout h3 + p + ul{
+  margin-top: var(--space-unit-sm);
+}
+
+.cv-layout ul li {
+  margin-bottom: var(--space-unit-xs);
+}

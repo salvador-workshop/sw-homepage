@@ -1,0 +1,86 @@
+
+.main-layout > .header {
+  /* margin-bottom: var(--space-unit); */
+  background-color: var(--color-bg-blastoise);
+  background-image: url("../images/backgrounds/noisy-grid-dark.png");
+  background-repeat: repeat;
+  border-bottom: var(--basic-line);
+}
+.header .header-nav-background {
+  width: 100%;
+  height: var(--toolbar-height);
+  background-image: url("../images/backgrounds/tight-hatch.svg");
+  position: absolute;
+  top: var(--header-height)
+}
+.main-layout .header-container {
+  max-width: var(--max-width-xs);
+  margin: 0 auto;
+  padding: 0 var(--space-unit);
+}
+.header .header-content {
+  padding: var(--space-unit) 0;
+  display: flex;
+  height: var(--header-height)
+}
+.header .header-icon-wrapper {
+  flex: 0 0 calc(var(--header-icon-height) + var(--space-unit-3q));
+}
+.header .header-icon {
+  width: var(--header-icon-height);
+}
+.header .header-text-wrapper {
+  padding-top: var(--space-unit-sm);
+  flex: 1 1 auto;
+}
+.header .header-title {
+  margin: 0;
+  color: var(--color-highlight-blastoise);
+  font-size: 1.92rem;
+  line-height: 1;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+.header .header-text {
+  font-size: var(--text-size-sm);
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  bottom: var(--space-unit-xs);
+  letter-spacing: 1.25px;
+}
+
+
+
+.main-layout > .footer {
+  padding: 0 0 1px 0;
+  background-color: var(--color-bg-blastoise);
+  background-image: url("../images/backgrounds/noisy-grid-dark.png");
+  background-repeat: repeat;
+  border-top: var(--basic-line);
+  position: relative;
+}
+.footer .footer-nav-background {
+  width: 100%;
+  height: var(--toolbar-height);
+  background-image: url("../images/backgrounds/tight-hatch.svg");
+  position: absolute;
+}
+.footer .footer-container {
+  max-width: var(--max-width-xs);
+  margin: 0 auto;
+  padding: 0 var(--space-unit);
+}
+.footer .footer-text-wrapper {
+  margin: var(--space-unit) 0;
+}
+.footer .footer-text {
+  font-size: var(--text-size-sm);
+  line-height: 1;
+  letter-spacing: 1.25px;
+  margin: var(--space-unit-6q) 0;
+}
+
+.footer .footer-text-small {
+  vertical-align: super;
+}

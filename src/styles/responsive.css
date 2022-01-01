@@ -1,0 +1,76 @@
+/*/////  STYLING OVERRIDES FOR VARIOUS DEVICES  /////*/
+
+/*/////  LARGE PHONES  /////*/
+
+@media (min-width: 640px) {
+  .main-container {
+    max-width: var(--max-width-sm);
+  }
+  .main-layout .header-container,
+  .footer .footer-container {
+    max-width: var(--max-width-sm);
+  }
+}
+
+/*/////  TABLETS  /////*/
+
+@media (min-width: 768px) {
+  .main-container {
+    max-width: var(--max-width-md1);
+  }
+  .main-layout .header-container,
+  .footer .footer-container {
+    max-width: var(--max-width-md1);
+  }
+
+  .home-feed {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
+    column-gap: var(--space-cards);
+  }
+}
+
+@media (min-width: 960px) {
+  .main-container {
+    max-width: var(--max-width-md2);
+  }
+  .main-layout .header-container,
+  .footer .footer-container {
+    max-width: var(--max-width-md2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-container {
+    max-width: var(--max-width-md3);
+  }
+  .main-layout .header-container,
+  .footer .footer-container {
+    max-width: var(--max-width-md3);
+  }
+}
+
+/*/////  LAPTOPS  /////*/
+
+/*
+  This is set to 1281px since I want to capture the 1280px
+  screens on the TABLET view
+*/
+@media (min-width: 1300px) {
+  .main-container {
+    max-width: var(--max-width-lg);
+  }
+  .main-layout .header-container,
+  .footer .footer-container {
+    max-width: var(--max-width-lg);
+  }
+}
+
+
+/*/////  DESKTOPS  /////*/
+
+/* @media (min-width: 1920px) {
+  .main-container {
+    max-width: var(--max-width-lg;
+  }
+} */

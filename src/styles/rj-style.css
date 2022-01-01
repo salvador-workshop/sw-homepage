@@ -1,0 +1,217 @@
+/* ----------
+CSS Custom Properties Definitions -- 2nd layer
+
+This stylesheet relates to new components and
+overrides the 1st layer from "style.css".
+---------- */
+
+
+/*/////  VARIABLES  /////*/
+
+:root {
+  /*/////  OVERRIDEN VARIABLES  /////*/
+  --fontFamily-sans: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --fontFamily-monospace: "Inconsolata", "Consolas", monaco, "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  --font-body: var(--fontFamily-sans);
+  --font-heading: var(--fontFamily-monospace);
+
+
+
+  /*/////  CUSTOM VARIABLES  /////*/
+  --color-header-blastoise: rgba(0, 0, 0, 0.25);
+  --color-post-content-blastoise: rgba(74, 74, 74, 0.94);
+  --color-highlight-blastoise: #D5AC4A;
+  --color-bg-blastoise: #083962;
+
+  --space-unit: 24px;
+  --space-unit-3q: calc(var(--space-unit) * 0.75);
+  --space-unit-sm: calc(var(--space-unit) / 2);
+  --space-unit-xs: calc(var(--space-unit) / 4);
+  --space-unit-6q: calc(var(--space-unit) * 1.5);
+  --space-unit-lg: calc(var(--space-unit) * 2);
+  --space-unit-xl: calc(var(--space-unit) * 4);
+
+  --space-cards: calc(var(--space-unit) * 2);
+
+  --text-size-sm: 0.8rem;
+  --main-title-spacing: 0.75px;
+
+  --basic-line: 1px white solid;
+  --max-width-xs: 360px;
+  --max-width-sm: 480px;
+  --max-width-md1: 640px;
+  --max-width-md2: 768px;
+  --max-width-md3: 960px;
+  --max-width-lg: 1280px;
+  
+  --header-icon-height: 72px;
+  --header-height: calc(var(--header-icon-height) + (var(--space-unit) * 2));
+  
+  --toolbar-button-width: 24px;
+  /* --toolbar-button-gutter: calc(var(--toolbar-button-width) / 2); */
+  --toolbar-button-gutter: var(--toolbar-button-width);
+  --toolbar-height: calc(var(--toolbar-button-width) + var(--space-unit));
+  --toolbar-left-width: calc(var(--toolbar-button-width) * 3 + var(--toolbar-button-gutter) * 2);
+  --toolbar-right-width: calc(var(--toolbar-button-width) * 2 + var(--toolbar-button-gutter));
+  
+  /* --content-border-line: 1px var(--color-highlight-blastoise) solid; */
+  --content-border-line: 1px rgba(255, 255, 255, 0.5) solid;
+}
+
+
+
+/*/////  OVERRIDES  /////*/
+
+.global-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: initial;
+  padding: 0;
+  background-color: #668;
+}
+
+.post-list-item {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+article.blog-post {
+  padding-top: var(--space-unit-6q);
+  margin: 0;
+}
+nav.blog-post-nav {
+  padding-bottom: var(--space-unit-6q);
+}
+.blog-post .blog-post-title {
+  letter-spacing: var(--main-title-spacing);
+  color: var(--color-highlight-blastoise);
+  margin-bottom: var(--space-unit-xs);
+}
+.blog-post .blog-post-details {
+  font-family: var(--fontFamily-monospace);
+  font-size: var(--text-size-sm);
+  text-transform: uppercase;
+}
+
+.blog-post h1,
+.blog-post h2,
+.blog-post h3,
+.blog-post h4,
+.blog-post h5,
+.blog-post h6 {
+  color: #dddddd;
+}
+.blog-post blockquote {
+  color: #cccccc;
+}
+
+.blog-post-nav .blog-post-nav-links {
+  color: var(--color-highlight-blastoise);
+  text-decoration: none;
+}
+
+article.blog-post img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-highlight-blastoise);
+}
+
+video {
+  width: 100%;
+  margin-bottom: var(--space-unit);
+}
+
+/*/////  CUSTOM CLASSES  /////*/
+
+.main-layout {
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-bg-blastoise);
+  color: #FFFFFF;
+}
+
+.main-container {
+  max-width: var(--max-width-xs);
+  min-height: 80vh;
+  margin: 0 auto;
+  padding: 0 var(--space-unit);
+}
+
+.home-feed {
+  padding: var(--space-cards) 0;
+}
+/* removes bottom margin for last card in the home feed */
+.home-feed > div:last-of-type {
+  margin-bottom: 0;
+}
+
+.page-layout h1,
+.page-layout h2,
+.page-layout h3,
+.page-layout h4,
+.page-layout h5,
+.page-layout h6 {
+  color: #dddddd;
+}
+.page-layout h3,
+.page-layout h4,
+.page-layout h5,
+.page-layout h6 {
+  font-weight: normal;
+}
+.page-layout h1:first-of-type {
+  letter-spacing: var(--main-title-spacing);
+  color: var(--color-highlight-blastoise);
+}
+.page-layout .page-container {
+  padding: var(--space-unit-6q) 0;
+}
+.page-layout .page-container h1:first-of-type {
+  margin-top: 0;
+}
+
+.text-spacer {
+  opacity: 0.25;
+  margin: 0 0.25rem;
+}
+
+.threejs-viz-container {
+  margin-bottom: var(--spacing-8);
+  position: relative;
+  width: 100%;
+  padding-bottom: 67%;
+}
+
+.about-layout h1,
+.about-layout h2,
+.about-layout h3 {
+  color: var(--color-highlight-blastoise);  
+}
+
+
+/*/////  UTILITY CLASSES FOR DEVELOPER CONVENIENCE  /////*/
+
+.util-layout-bg {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.util-layout-bg1 {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.util-layout-bg2 {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.util-layout-bg3 {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.util-border {
+  border: 1px dashed white;
+}
