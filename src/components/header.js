@@ -16,7 +16,7 @@ const Header = ({ isHome, isPost }) => (
           <span className="header-text">Web developer, designer</span>
         </div>
       </div>
-      <NavigationToolbar isHome={isHome} isPost={isPost} />
+      <NavigationToolbar />
     </div>
   </div>
 )

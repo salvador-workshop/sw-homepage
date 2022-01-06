@@ -1,31 +1,19 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import HomeFeed from "../components/home-feed"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMdx.nodes
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="Home" />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} className="page-layout home-layout">
       <Seo title="Home" />
-      <HomeFeed posts={posts} />
+      <div className="page-container">
+        <MDXRenderer>{data.allMdx.nodes[0].body}</MDXRenderer>
+      </div>
     </Layout>
   )
 }
@@ -39,22 +27,9 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { ne: "page" } } }
-    ) {
+    allMdx(filter: { frontmatter: { slug: { eq: "home" } } }) {
       nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMM DD, YYYY")
-          title
-          category
-          description
-          thumbnail
-        }
+        body
       }
     }
   }

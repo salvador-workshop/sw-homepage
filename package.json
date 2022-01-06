@@ -1,11 +1,11 @@
 {
-  "name": "rj-portfolio-v6",
+  "name": "sw-homepage",
   "private": true,
-  "description": "RJ Salvador's Portfolio (v6)",
-  "version": "1.0.0",
-  "author": "RJ Salvador <rjsalvadorr@gmail.com>",
+  "description": "Salvador Workshop's Home Webpage",
+  "version": "0.0.1",
+  "author": "R. J. Salvador <salvador.workshop@gmail.com>",
   "bugs": {
-    "url": "https://github.com/rjsalvadorr/portfolio-v6"
+    "url": "https://github.com/salvador-workshop/sw-homepage"
   },
   "dependencies": {
     "@fontsource/inconsolata": "^4.5.0",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "prettier": "2.5.0"
   },
-  "homepage": "https://github.com/rjsalvadorr/portfolio-v6",
+  "homepage": "https://github.com/salvador-workshop/sw-homepage",
   "keywords": [
     "gatsby"
   ],
@@ -50,7 +50,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rjsalvadorr/portfolio-v6.git"
+    "url": "git+https://github.com/salvador-workshop/sw-homepage.git"
   },
   "scripts": {
     "build": "gatsby build",

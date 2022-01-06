@@ -2,25 +2,24 @@ import * as React from "react"
 
 import NavigationButton from "./navigation-button"
 
-const ENABLE_NAV_ARROWS = false;
+const ENABLE_NAV_ARROWS = true;
 
-const NavigationToolbar = ({ isHome, isPost }) => {
-  const isNavArrowActive = !!isPost && ENABLE_NAV_ARROWS;
+const NavigationToolbar = () => {
+  const isNavArrowActive = ENABLE_NAV_ARROWS;
   return (
     <div className="navigation-toolbar">
       <div className="nav-btn-container nav-btn-container-left">
         <NavigationButton buttonId="home" buttonType="link" isActive={true} />
-        <NavigationButton buttonId="cv" buttonType="link" isActive={true} />
-        <NavigationButton buttonId="about" buttonType="link" isActive={true} />
+        <NavigationButton buttonId="services" buttonType="link" isActive={true} />
       </div>
       <div className="nav-btn-container nav-btn-container-right">
         <NavigationButton
-          buttonId="left"
+          buttonId="light"
           buttonType="ui"
           isActive={isNavArrowActive}
         />
         <NavigationButton
-          buttonId="right"
+          buttonId="dark"
           buttonType="ui"
           isActive={isNavArrowActive}
         />

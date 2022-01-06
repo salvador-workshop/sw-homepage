@@ -152,7 +152,10 @@ video {
 
 .page-layout h1,
 .page-layout h2,
-.page-layout h3,
+.page-layout h3 {
+  color: var(--color-highlight-blastoise);
+}
+
 .page-layout h4,
 .page-layout h5,
 .page-layout h6 {
@@ -185,12 +188,6 @@ video {
   position: relative;
   width: 100%;
   padding-bottom: 67%;
-}
-
-.about-layout h1,
-.about-layout h2,
-.about-layout h3 {
-  color: var(--color-highlight-blastoise);  
 }
 
 

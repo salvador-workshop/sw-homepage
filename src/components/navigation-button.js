@@ -2,16 +2,14 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import iconHome from "../images/icons/linea/basic_home.svg"
-import iconAbout from "../images/icons/line-icons/profile-male.svg"
-import iconCv from "../images/icons/line-icons/document.svg"
-import iconLeft from "../images/icons/feather/chevron-left.svg"
-import iconRight from "../images/icons/feather/chevron-right.svg"
+import iconServices from "../images/icons/line-icons/profile-male.svg"
+import iconLight from "../images/icons/feather/chevron-left.svg"
+import iconDark from "../images/icons/feather/chevron-right.svg"
 
 const getLink = buttonId => {
   const linkMap = {
     home: "/",
-    about: "/about",
-    cv: "/cv",
+    services: "/services",
   }
 
   if (!linkMap[buttonId]) {
@@ -24,10 +22,9 @@ const getLink = buttonId => {
 const getIcon = buttonId => {
   const iconMap = {
     home: iconHome,
-    about: iconAbout,
-    cv: iconCv,
-    left: iconLeft,
-    right: iconRight,
+    services: iconServices,
+    light: iconLight,
+    dark: iconDark,
   }
 
   if (!iconMap[buttonId]) {

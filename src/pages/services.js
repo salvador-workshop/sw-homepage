@@ -27,7 +27,7 @@ query {
       title
     }
   }
-  allMdx(filter: { frontmatter: { slug: { eq: "about" } } }) {
+  allMdx(filter: { frontmatter: { slug: { eq: "services" } } }) {
     nodes {
       body
     }
