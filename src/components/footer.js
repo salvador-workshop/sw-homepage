@@ -2,7 +2,7 @@ import * as React from "react"
 
 const Footer = ({ isHome, isPost }) => (
   <div className="footer">
-    <div className="footer-nav-background"></div>
+    {/* <div className="footer-nav-background"></div> */}
     <div className="footer-container">
       <div className="footer-text-wrapper">
         <p className="footer-text">

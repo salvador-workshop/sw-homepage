@@ -60,12 +60,6 @@
   border-top: var(--basic-line);
   position: relative;
 }
-.footer .footer-nav-background {
-  width: 100%;
-  height: var(--toolbar-height);
-  background-image: url("../images/backgrounds/tight-hatch.svg");
-  position: absolute;
-}
 .footer .footer-container {
   max-width: var(--max-width-xs);
   margin: 0 auto;
