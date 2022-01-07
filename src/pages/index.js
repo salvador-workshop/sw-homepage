@@ -12,6 +12,13 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle} className="page-layout home-layout">
       <Seo title="Home" />
       <div className="page-container">
+          <div className="hero-img-container">
+              <img
+                className="hero-img"
+                src="/full-dark.png"
+                alt="hero image"
+              />
+            </div>
         <MDXRenderer>{data.allMdx.nodes[0].body}</MDXRenderer>
       </div>
     </Layout>

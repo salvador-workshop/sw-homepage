@@ -19,7 +19,9 @@ const Layout = ({ location, title, children, className, isPost }) => {
       <div className={`main-layout ${cName}`}>
         <Header isHome={isRootPath} isPost={isPost} />
         <div className="main-wrapper">
-          <main className="main-container">{children}</main>
+          <main className="main-container">
+            {children}
+          </main>
         </div>
         <Footer isHome={isRootPath} isPost={isPost} />
         <div className="overlay"></div>

@@ -27,7 +27,7 @@
   flex: 0 0 calc(var(--header-icon-height) + var(--space-unit-3q));
 }
 .header .header-icon {
-  width: var(--header-icon-height);
+  height: var(--header-icon-height);
 }
 .header .header-text-wrapper {
   padding-top: var(--space-unit-sm);
