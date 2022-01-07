@@ -13,5 +13,9 @@ Salvador Workshop is a cross-functional design shop, combining multiple crafts t
 
 ## Contact Info
 
+<div style="text-align: center">
+
 R. J. Salvador  
 salvador.workshop@gmail.com
+
+</div>

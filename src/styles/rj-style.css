@@ -219,6 +219,10 @@ video {
   padding-bottom: 67%;
 }
 
+.services-layout .gatsby-resp-image-wrapper {
+  text-align: left;
+}
+
 /*/////  UTILITY CLASSES FOR DEVELOPER CONVENIENCE  /////*/
 
 .util-layout-bg {
