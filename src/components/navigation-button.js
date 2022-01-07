@@ -2,9 +2,10 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import iconHome from "../images/icons/linea/basic_home.svg"
-import iconServices from "../images/icons/line-icons/profile-male.svg"
-import iconLight from "../images/icons/feather/chevron-left.svg"
-import iconDark from "../images/icons/feather/chevron-right.svg"
+// import iconServices from "../images/icons/linea/basic_gear.svg"
+import iconServices from "../images/icons/linea/basic_settings.svg"
+import iconLight from "../images/icons/feather/sun.svg"
+import iconDark from "../images/icons/feather/moon.svg"
 
 const getLink = buttonId => {
   const linkMap = {

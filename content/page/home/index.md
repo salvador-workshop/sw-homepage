@@ -9,10 +9,9 @@ description: ""
 
 # Who we are
 
-Salvador Workshop is a cross-functional design shop, combining multiple crafts to create fine solutions.
-
-Our workshop aims to tackle a variety of technical and design problems. Thanks to our team’s creativity and skills, we deliver fine solutions, digitally (for now) and physically (in the future)
+Salvador Workshop is a cross-functional design shop, combining multiple crafts to create fine solutions. Thanks to our team’s creativity and skills, we deliver fine solutions to a variety of technical and design problems.
 
 ## Contact Info
 
+R. J. Salvador  
 salvador.workshop@gmail.com

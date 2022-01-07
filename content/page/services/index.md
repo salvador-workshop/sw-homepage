@@ -19,8 +19,9 @@ If you’re looking for assistance for your front-end dev team, say less! We kno
 
 ### Brand style guide
 
-A document that specifies and establishes visual standards for your brand. Having a solid style guide allows your brand to have consistent visuals on advertisement, websites, social media profiles, etc.
-Having a style guide done is useful if you’re ok with applying the styling yourself, or know someone who can. Style guides are also handy as documentation. For example, having a style spec gives future designers an easier time with redesigning or updating your brand.
+Brand style guides are documents that specify and establish visual standards for your brand. A solid style guide allows your brand to have consistent visuals on advertisement, websites, social media profiles, etc.
+
+Having a style guide done is useful if you’re ok with applying the styling yourself, or know someone who can. Style guides are also handy as documentation. For example, a style spec gives future designers an easier time with updating your brand by giving them context for design decisions.
 
 ### Brand styling (online)
 
