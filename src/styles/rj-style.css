@@ -61,7 +61,7 @@ overrides the 1st layer from "style.css".
   --max-width-md3: 960px;
   --max-width-lg: 1280px;
   
-  --header-icon-height: 72px;
+  --header-icon-height: 48px;
   --header-height: calc(var(--header-icon-height) + (var(--space-unit) * 2));
   
   --toolbar-button-width: 24px;
