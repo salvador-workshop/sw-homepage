@@ -15,6 +15,8 @@ description: ""
 
 If you’re looking for assistance for your front-end dev team, say less! We know how to build good code in generic web stacks to more specialized frameworks like React.
 
+---
+
 ## Web Design
 
 ### Brand style guide
@@ -37,19 +39,28 @@ A set of graphics that target particular social media pages. Useful for starting
 
 A well-structured package of images and media. Useful if you already have assets for your brand, but need those assets reworked into specific file formats, sizes, or for certain websites.
 
+---
+
 ## Graphic Design
 
-### Logo design
+### Logo
 
 A logo consisting of graphics and a wordmark.
 
-### Album cover design
+### Business cards
+
+- Standard: 3.5" x 2"
+- Square: 2.5" x 2.5"
+
+### Album covers
 
 Musical album covers, for print and digital distribution. Delivered as PDF and PNG
 
-### Poster design
+### Posters
 
 Posters for advertisments, events, etc.
+
+---
 
 ## File formats
 

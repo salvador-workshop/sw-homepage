@@ -164,7 +164,7 @@ video {
 
 .ornament-border.top {
   margin-top: calc(var(--space-unit) * 2);
-  margin-bottom: calc(var(--space-unit) * 3);
+  margin-bottom: calc(var(--space-unit) * 1);
 }
 .ornament-border.top.homepage {
   margin-bottom: 0;
@@ -172,6 +172,11 @@ video {
 .ornament-border.bottom {
   margin-top: calc(var(--space-unit) * 3);
   margin-bottom: calc(var(--space-unit) * 2);
+}
+
+.page-layout h1,
+.page-layout h2 {
+  text-align: center;
 }
 
 .page-layout h1,
@@ -213,7 +218,6 @@ video {
   width: 100%;
   padding-bottom: 67%;
 }
-
 
 /*/////  UTILITY CLASSES FOR DEVELOPER CONVENIENCE  /////*/
 

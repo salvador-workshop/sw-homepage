@@ -9,7 +9,7 @@ const ServicesPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout location={location} title={siteTitle} className="page-layout about-layout">
+    <Layout location={location} title={siteTitle} className="page-layout services-layout">
       <Seo title="About Me" />
       <div className="page-container">
         <div className="ornament-border top">
