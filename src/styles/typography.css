@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Singel";
+  src: url("/fonts/singel/Commercial/OTF/SingelDemo-SemiBold.otf");
+}
+
+@font-face {
+  font-family: "Aleo";
+  src: url("/fonts/aleo/Commercial/WEB/aleo-light-webfont.woff2");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aleo";
+  src: url("/fonts/aleo/Commercial/WEB/aleo-bold-webfont.woff2");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aleo";
+  src: url("/fonts/aleo/Commercial/WEB/aleo-regular-webfont.woff2");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
