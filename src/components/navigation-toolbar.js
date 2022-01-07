@@ -8,11 +8,9 @@ const NavigationToolbar = () => {
   const isNavArrowActive = ENABLE_NAV_ARROWS;
   return (
     <div className="navigation-toolbar">
-      <div className="nav-btn-container nav-btn-container-left">
+      <div className="nav-btn-container">
         <NavigationButton buttonId="home" buttonType="link" isActive={true} />
         <NavigationButton buttonId="services" buttonType="link" isActive={true} />
-      </div>
-      <div className="nav-btn-container nav-btn-container-right">
         <NavigationButton
           buttonId="light"
           buttonType="ui"

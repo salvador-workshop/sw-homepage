@@ -9,6 +9,7 @@ const Header = ({ isHome, isPost }) => (
         <div className="header-icon-wrapper">
           <img className="header-icon" src="/full-white.svg" alt="header icon" />
         </div>
+        <div className="header-flex-spacer" />
         <div className="header-toolbar-wrapper">
           <NavigationToolbar />
         </div>

@@ -62,16 +62,14 @@ overrides the 1st layer from "style.css".
   --max-width-lg: 1280px;
   
   --header-icon-height: 48px;
-  --header-height: calc(var(--header-icon-height) + (var(--space-unit) * 2));
+  --header-height: calc(var(--header-icon-height) + var(--space-unit));
   
   --toolbar-button-width: 24px;
-  /* --toolbar-button-gutter: calc(var(--toolbar-button-width) / 2); */
   --toolbar-button-gutter: var(--toolbar-button-width);
   --toolbar-height: calc(var(--toolbar-button-width) + var(--space-unit));
   --toolbar-left-width: calc(var(--toolbar-button-width) * 3 + var(--toolbar-button-gutter) * 2);
   --toolbar-right-width: calc(var(--toolbar-button-width) * 2 + var(--toolbar-button-gutter));
   
-  /* --content-border-line: 1px var(--color-highlight1-sw) solid; */
   --content-border-line: 1px rgba(255, 255, 255, 0.5) solid;
 }
 

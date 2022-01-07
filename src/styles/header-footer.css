@@ -12,16 +12,20 @@
   padding: 0 var(--space-unit);
 }
 .header .header-content {
-  padding: var(--space-unit) 0;
+  padding: var(--space-unit-sm) 0;
   display: flex;
   height: var(--header-height)
 }
 .header .header-icon-wrapper {
+  position: relative;
+  bottom: 3px;
   flex: 0 0 calc(var(--header-icon-height) + var(--space-unit-3q));
+}
+.header .header-flex-spacer {
+  flex: 2 0;
 }
 .header .header-toolbar-wrapper {
   flex: 1 0;
-  padding-left: var(--space-unit);
 }
 .header .header-icon {
   height: var(--header-icon-height);
