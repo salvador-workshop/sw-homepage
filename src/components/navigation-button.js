@@ -36,7 +36,7 @@ const getIcon = buttonId => {
 }
 
 const NavigationButton = ({ buttonType, buttonId, isActive }) => {
-  const classMod = isActive ? "active" : "disabled"
+  let classMod = isActive ? "active" : "disabled"
 
   if (!!buttonId) {
     if (buttonType === "link") {
@@ -56,6 +56,8 @@ const NavigationButton = ({ buttonType, buttonId, isActive }) => {
     }
 
     if (buttonType === "ui") {
+      // overriding for now, until light/dark switch is actually implemented
+      classMod = 'disabled';
       return (
         <div className={`navigation-button ${classMod}`}>
           <div className="navigation-icon-wrapper">
