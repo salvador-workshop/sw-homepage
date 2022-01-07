@@ -157,8 +157,21 @@ video {
   padding: 0 var(--space-unit);
 }
 
-.hero-img {
+.hero-img,
+.ornament-img {
   width: 100%;
+}
+
+.ornament-border.top {
+  margin-top: calc(var(--space-unit) * 2);
+  margin-bottom: calc(var(--space-unit) * 3);
+}
+.ornament-border.top.homepage {
+  margin-bottom: 0;
+}
+.ornament-border.bottom {
+  margin-top: calc(var(--space-unit) * 3);
+  margin-bottom: calc(var(--space-unit) * 2);
 }
 
 .page-layout h1,
