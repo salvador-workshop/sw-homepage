@@ -12,7 +12,7 @@ import "./src/styles/style.css"
 
 // custom CSS styles
 import "./src/styles/typography.css"
-import "./src/styles/rj-style.css"
+import "./src/styles/sw-style.css"
 import "./src/styles/header-footer.css"
 import "./src/styles/navigation-toolbar.css"
 import "./src/styles/card.css"

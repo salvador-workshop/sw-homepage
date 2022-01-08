@@ -2,7 +2,7 @@ import * as React from "react"
 
 import NavigationToolbar from "./navigation-toolbar"
 
-const Header = ({ isHome, isPost }) => (
+const Header = ({ isHome, isPost, isLightUi }) => (
   <div className="header">
     <div className="header-container">
       <div className="header-content">
@@ -11,7 +11,7 @@ const Header = ({ isHome, isPost }) => (
         </div>
         <div className="header-flex-spacer" />
         <div className="header-toolbar-wrapper">
-          <NavigationToolbar />
+          <NavigationToolbar isLightUi={isLightUi}/>
         </div>
       </div>
     </div>

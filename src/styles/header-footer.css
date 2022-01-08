@@ -22,10 +22,10 @@
   flex: 0 0 calc(var(--header-icon-height) + var(--space-unit-3q));
 }
 .header .header-flex-spacer {
-  flex: 2 0;
+  flex: 1 0;
 }
 .header .header-toolbar-wrapper {
-  flex: 1 0;
+  flex: 3 0;
 }
 .header .header-icon {
   height: var(--header-icon-height);
@@ -71,7 +71,7 @@
 }
 .footer .footer-text {
   font-size: var(--text-size-sm);
-  line-height: 1;
+  /* line-height: 1; */
   letter-spacing: 1.25px;
   margin: var(--space-unit-6q) 0;
 }

@@ -5,6 +5,7 @@ import Footer from "./footer"
 const Layout = ({ location, title, children, className, isPost }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+  const isLightUi = false;
 
   // console.log(location, title, children, className)
   const cName = className ? className : '';
@@ -17,7 +18,7 @@ const Layout = ({ location, title, children, className, isPost }) => {
       </div>
 
       <div className={`main-layout ${cName}`}>
-        <Header isHome={isRootPath} isPost={isPost} />
+        <Header isHome={isRootPath} isPost={isPost} isLightUi={isLightUi}/>
         <div className="main-wrapper">
           <main className="main-container">
             {children}

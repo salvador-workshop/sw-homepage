@@ -10,6 +10,24 @@
   .footer .footer-container {
     max-width: var(--max-width-sm);
   }
+  .header .header-flex-spacer {
+    flex: 2 0;
+  }
+  .header .header-toolbar-wrapper {
+    flex: 1 0;
+  }
+
+  .ornament-border.top {
+    margin-top: calc(var(--space-unit) * 2);
+    margin-bottom: calc(var(--space-unit) * 1);
+  }
+  .ornament-border.top.homepage {
+    margin-bottom: 0;
+  }
+  .ornament-border.bottom {
+    margin-top: calc(var(--space-unit) * 3);
+    margin-bottom: calc(var(--space-unit) * 2);
+  }
 }
 
 /*/////  TABLETS  /////*/

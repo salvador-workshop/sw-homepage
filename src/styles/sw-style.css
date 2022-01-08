@@ -10,7 +10,7 @@ overrides the 1st layer from "style.css".
 
 :root {
   /*/////  OVERRIDEN VARIABLES  /////*/
-  --fontFamily-sans: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
+  --fontFamily-sans: "Open Sans", Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
   "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
@@ -23,6 +23,7 @@ overrides the 1st layer from "style.css".
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --font-body: var(--fontFamily-sans);
+  --font-main-heading: var(--fontFamily-singel);
   --font-heading: var(--fontFamily-aleo);
 
 
@@ -53,7 +54,7 @@ overrides the 1st layer from "style.css".
   --text-size-sm: 0.8rem;
   --main-title-spacing: 0.75px;
 
-  --basic-line: 1px white solid;
+  --basic-line: 1px rgba(255, 255, 255, 0.25) solid;
   --max-width-xs: 360px;
   --max-width-sm: 480px;
   --max-width-md1: 640px;
@@ -162,13 +163,13 @@ video {
 
 .ornament-border.top {
   margin-top: calc(var(--space-unit) * 2);
-  margin-bottom: calc(var(--space-unit) * 1);
+  margin-bottom: calc(var(--space-unit) * 1.5);
 }
 .ornament-border.top.homepage {
-  margin-bottom: 0;
+  margin-bottom: calc(var(--space-unit) * 1);
 }
 .ornament-border.bottom {
-  margin-top: calc(var(--space-unit) * 3);
+  margin-top: calc(var(--space-unit) * 2);
   margin-bottom: calc(var(--space-unit) * 2);
 }
 

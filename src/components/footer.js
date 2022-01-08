@@ -7,9 +7,8 @@ const Footer = ({ isHome, isPost }) => (
         <p className="footer-text">
           <span>© {new Date().getFullYear()}</span>
           <span className="text-spacer">//</span>
-          <span>Salvador Workshop</span>
-          <span className="text-spacer">//</span>
-          <span>Toronto, Canada</span>
+          <span>Salvador Workshop</span><br />
+          <span>Toronto ON, Canada</span>
         </p>
       </div>
     </div>
