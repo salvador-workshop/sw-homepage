@@ -23,7 +23,7 @@ const HomepageIndex = ({ data, location }) => {
           <img
             className="hero-img"
             src="/full-dark.png"
-            alt="hero image"
+            alt="hero"
           />
         </div>
         <MDXRenderer>{data.allMdx.nodes[0].body}</MDXRenderer>

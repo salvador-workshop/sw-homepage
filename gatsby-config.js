@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Portfolio - RJ Salvador`,
+    title: `·-=[ Salvador Workshop ]=-·`,
     author: {
-      name: `RJ Salvador`,
-      summary: `Web Developer / Architectural Technologist from Toronto, Canada`,
+      name: `Salvador Workshop`,
+      summary: `Salvador Workshop is a design shop in Toronto, Canada`,
     },
-    image: `/meta-snapshot-20211203.jpg`,
-    description: `RJ Salvador's Portfolio`,
-    siteUrl: `https://rjsalvadorr.com/`,
-    social: {
-      twitter: `flapsnacc`,
-    },
+    image: `/meta-img.png`,
+    description: `Salvador Workshop's Homepage`,
+    siteUrl: `https://salvador-workshop.ca/`,
+    // social: {
+    //   twitter: `salvador-workshop`,
+    // },
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -62,8 +62,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Portfolio - RJ Salvador`,
-        short_name: `Portfolio - RJ Salvador`,
+        name: `Homepage // Salvador Workshop`,
+        short_name: `Homepage // Salvador Workshop`,
         start_url: `/`,
         background_color: `#083962`,
         // This will impact how browsers show your PWA/website

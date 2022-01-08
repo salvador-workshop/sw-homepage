@@ -10,7 +10,7 @@ const ServicesPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle} className="page-layout services-layout">
-      <Seo title="About Me" />
+      <Seo title="Services" />
       <div className="page-container">
         <div className="ornament-border top">
           <img
