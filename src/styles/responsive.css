@@ -28,6 +28,10 @@
     margin-top: calc(var(--space-unit) * 3);
     margin-bottom: calc(var(--space-unit) * 2);
   }
+
+  .page-layout h1:first-of-type {
+    font-size: var(--fontSize-7);
+  }
 }
 
 /*/////  TABLETS  /////*/
@@ -46,6 +50,13 @@
     grid-template-columns: repeat(2, minmax(10px, 1fr));
     column-gap: var(--space-cards);
   }
+
+  .header .header-flex-spacer {
+    flex: 3 0;
+  }
+  .header .header-toolbar-wrapper {
+    flex: 1 0;
+  }
 }
 
 @media (min-width: 960px) {
@@ -55,6 +66,13 @@
   .main-layout .header-container,
   .footer .footer-container {
     max-width: var(--max-width-md2);
+  }
+
+  .header .header-flex-spacer {
+    flex: 4 0;
+  }
+  .header .header-toolbar-wrapper {
+    flex: 1 0;
   }
 }
 

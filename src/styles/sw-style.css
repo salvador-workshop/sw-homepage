@@ -52,7 +52,8 @@ overrides the 1st layer from "style.css".
   --space-cards: calc(var(--space-unit) * 2);
 
   --text-size-sm: 0.8rem;
-  --main-title-spacing: 0.75px;
+  --main-title-spacing: 0.5rem;
+  --heading-spacing: 0.083rem;
 
   --basic-line: 1px rgba(255, 255, 255, 0.25) solid;
   --max-width-xs: 360px;
@@ -161,8 +162,13 @@ video {
   width: 100%;
 }
 
+hr {
+  margin-top: var(--space-unit-lg);
+  margin-bottom: var(--space-unit-lg);
+}
+
 .ornament-border.top {
-  margin-top: calc(var(--space-unit) * 2);
+  margin-top: calc(var(--space-unit) * 1.5);
   margin-bottom: calc(var(--space-unit) * 1.5);
 }
 .ornament-border.top.homepage {
@@ -173,6 +179,8 @@ video {
   margin-bottom: calc(var(--space-unit) * 2);
 }
 
+
+
 .page-layout h1,
 .page-layout h2 {
   text-align: center;
@@ -182,6 +190,7 @@ video {
 .page-layout h2,
 .page-layout h3 {
   color: var(--color-highlight1-sw);
+  letter-spacing: var(--heading-spacing);
 }
 
 .page-layout h4,
@@ -197,7 +206,8 @@ video {
 }
 .page-layout h1:first-of-type {
   letter-spacing: var(--main-title-spacing);
-  color: var(--color-highlight1-sw);
+  color: white;
+  padding-top: var(--space-unit-sm);
 }
 .page-layout .page-container {
   padding: var(--space-unit-6q) 0;
