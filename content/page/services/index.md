@@ -21,17 +21,9 @@ If you’re looking for assistance for your front-end dev team, say less! We kno
 
 ## Web Design
 
-### Brand style guide
-
-Brand style guides are documents that specify and establish visual standards for your brand. A solid style guide allows your brand to have consistent visuals on advertisement, websites, social media profiles, etc.
-
-![Brand Style Guide - Demo](styleguide-demo.png)
-
-Having a style guide done is useful if you’re ok with applying the styling yourself, or know someone who can. Style guides are also handy as documentation. For example, a style spec gives future designers an easier time with updating your brand by giving them context for design decisions.
-
 ### Brand styling (online)
 
-A set of graphics that target particular social media pages. Useful for starting or refreshing your online visual presence on platforms like:
+A set of graphics for a social media page. Start or refresh your online visual presence on platforms like:
 
 - YouTube
 - Facebook
@@ -41,7 +33,15 @@ A set of graphics that target particular social media pages. Useful for starting
 
 ### Brand asset formatting
 
-A well-structured package of images and media. Useful if you already have assets for your brand, but need those assets reworked into specific file formats, sizes, or for certain websites.
+A well-formatted package of images and media. Useful if you already have assets for your brand, but need those assets reworked into specific file formats, sizes, or for certain platforms.
+
+### Brand style guide
+
+Brand style guides are documents that specify and establish visual standards for your brand. A solid style guide allows your brand to have consistent visuals on advertisement, websites, social media profiles, etc.
+
+![Brand Style Guide - Demo](styleguide-demo.png)
+
+Getting one is useful if you’re ok with applying the styling yourself, or know someone who can. Style guides are also handy as documentation. For example, a style spec gives future designers an easier time with updating your brand by giving them context for design decisions.
 
 ---
 
@@ -56,19 +56,10 @@ A logo consisting of graphics and a wordmark.
 - Standard: 3.5" x 2"
 - Square: 2.5" x 2.5"
 
-### Album covers
-
-Musical album covers, for print and digital distribution. Delivered as PDF and PNG
-
 ### Posters
 
 Posters for advertisments, events, etc.
 
----
+### Album covers
 
-## File formats
-
-- Logo designs delivered as PNG, SVG, JPG
-- Brand style guides delivered as a PDF
-- Brand styling assets delivered as PNG, JPG, (and SVG when feasible)
-- Album covers and posters are delivered as PDF, PNG, JPG
+Musical album covers, for print and digital distribution. Delivered as PDF and PNG
