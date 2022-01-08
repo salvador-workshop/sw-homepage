@@ -15,9 +15,10 @@ import "./src/styles/typography.css"
 import "./src/styles/sw-style.css"
 import "./src/styles/header-footer.css"
 import "./src/styles/navigation-toolbar.css"
-import "./src/styles/card.css"
+// import "./src/styles/card.css"
 import "./src/styles/responsive.css"
-import "./src/styles/cv.css"
+// import "./src/styles/cv.css"
+import "./src/styles/broken-grid.css"
 
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"
