@@ -33,7 +33,7 @@ class GalleryWall extends React.Component {
     return filteredBoxes;
   }
   
-  initializeGrid(boxDivisionScale = 12) {
+  initializeGrid(boxDivisionScale = 7) {
     let bDivisionScale = boxDivisionScale;
     this.mainBox = {
       x: 0,

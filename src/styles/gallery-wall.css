@@ -1,6 +1,18 @@
 .gallery-wall-wrapper-wrapper {
   position: relative;
-  height: calc((100vh + 100vw) / 2);
+}
+
+@media (orientation: landscape) {
+  .gallery-wall-wrapper-wrapper {
+    height: 100vh;
+  }
+}
+
+/* Squares fall into portrait mode */
+@media (orientation: portrait) {
+  .gallery-wall-wrapper-wrapper {
+    height: 100vw;
+  }
 }
 
 .vizWrapper,
