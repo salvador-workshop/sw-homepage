@@ -73,9 +73,24 @@ class GalleryWall extends React.Component {
       element.style.height = `${gUnit.h}%`;
       element.style.opacity = gUnit.intensity2;
       element.style.backgroundColor = '#555555';
-
       element.style.border = '1px solid white';
+
+      // const galleryImg = document.createElement('img')
+      // galleryImg.classList.add('gallery-img-wrapper');
+      // galleryImg.src='https://via.placeholder.com/300x200?text=WIP';
+      
+      // const imgWrapper = document.createElement('div');
+      // imgWrapper.classList.add('gallery-img-wrapper');
+  
+      // imgWrapper.append(galleryImg)
+      // element.append(imgWrapper)
+
+      element.style.backgroundImage = "url(https://via.placeholder.com/300x200?text=WIP)";
+      element.style.backgroundPosition = 'center';
+      element.style.backgroundSize = 'cover';
+      element.style.backgroundRepeat = 'no-repeat';
     }
+
   }
 
   render () {
@@ -83,21 +98,21 @@ class GalleryWall extends React.Component {
     if(!cGrid) {
       return (
         <div
-        className="bGridWrapper"
+        className="gallery-wall-wrapper"
           ref={this.bGridRef}
         ></div>
       );
     }
 
     return (
-      <div className="gallery-wall-wrapper-wrapper">
+      <div className="gallery-wall-container">
         <div
-          className="bGridWrapper"
+          className="gallery-wall-wrapper"
           ref={this.bGridRef}
         >
           {this.state.circleGrid && this.state.circleGrid.map((box, idx) => {
             return (
-              <div key={idx} className={`box box--${box.id} bGridBox`} ></div>
+              <div key={idx} className={`box box--${box.id} gallery-box`} ></div>
             )
           })}
         </div>
@@ -111,11 +126,12 @@ class GalleryWall extends React.Component {
   }
 
   componentDidUpdate () {
-    console.log('update', this.bGridRef.current.clientWidth, this.mainBox, this.state)
-
     for(let box of this.state.circleGrid) {
       this.drawBox(box);
     }
+    
+    const displayedBoxes = document.getElementsByClassName(`gallery-box`);
+    console.log('update', this.bGridRef.current.clientWidth, displayedBoxes, this.state)
   }
 }
 
