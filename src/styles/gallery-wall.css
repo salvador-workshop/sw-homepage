@@ -1,0 +1,43 @@
+.gallery-wall-container {
+  position: relative;
+}
+
+@media (orientation: landscape) {
+  .gallery-wall-container {
+    height: 100vh;
+  }
+}
+
+/* Squares fall into portrait mode */
+@media (orientation: portrait) {
+  .gallery-wall-container {
+    height: 100vw;
+  }
+}
+
+/*
+.gallery-img-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 200px;
+  margin-top: -100px; /* Half the height
+  margin-left: -150px; /* Half the width
+}
+*/
+
+.vizWrapper,
+.gallery-wall-wrapper,
+.vizOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.gallery-box {
+  position: absolute;
+  overflow: hidden;
+}
