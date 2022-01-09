@@ -1,5 +1,6 @@
 .gallery-wall-wrapper-wrapper {
   position: relative;
+  height: calc((100vh + 100vw) / 2);
 }
 
 .vizWrapper,
@@ -32,10 +33,10 @@
 *  BROKEN GRID
 *******************************************************************************/
 
-.bGridWrapper {
-  /* z-index: -200; */
+/* .bGridWrapper {
+  z-index: -200;
   background-color: #080808;
-}
+} */
 
 .bGridBox {
   position: absolute;

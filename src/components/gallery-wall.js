@@ -18,18 +18,10 @@ class GalleryWall extends React.Component {
   buildCircleGrid(inputGrid) {
     let filteredBoxes = [];
     if(inputGrid && inputGrid.filterBoxes) {
-      
-      // const portrait = this.mainBox.h > this.mainBox.w;
-      // let longSide;
-
-      // if(portrait) {
-      //   longSide = this.mainBox.h;
-      // } else {
-      //   longSide = this.mainBox.w;
-      // }
 
       const initializeBox = box => {
         box.intensity1 = 1;
+        box.intensity2 = 0.25 + (0.75 * Math.random());
       };
 
       const mappyFilter = (item) => {
@@ -41,40 +33,26 @@ class GalleryWall extends React.Component {
     return filteredBoxes;
   }
   
-  initializeGrid(minBoxArea = 35, boxGutter = 14) {
-    if(!this.bGridRef.current) {
-      return;
-    }
-
-    let mBoxArea = minBoxArea;
-    let bGutter = boxGutter;
-
-    if(this.bGridRef.current.clientWidth >= 580) {
-      mBoxArea = 40;
-      bGutter = 16;
-    }
-    if(this.bGridRef.current.clientWidth >= 750) {
-      mBoxArea = 70;
-      bGutter = 18;
-    }
-    if(this.bGridRef.current.clientWidth >= 1200) {
-      mBoxArea = 100;
-    }
-    
+  initializeGrid(boxDivisionScale = 12) {
+    let bDivisionScale = boxDivisionScale;
     this.mainBox = {
       x: 0,
       y: 0,
-      w: this.bGridRef.current.clientWidth,
-      h: this.bGridRef.current.clientHeight,
+      w: 100,
+      h: 100,
     };
-    
+    const minArea = this.mainBox.w * this.mainBox.h / bDivisionScale
+    const boxGutter = 0;
+
+    console.log('init', this.bGridRef.current.clientWidth, this.mainBox)
+
     const rGrid = new BrokenGrid(
       this.mainBox.x,
       this.mainBox.y,
       this.mainBox.w,
       this.mainBox.h,
-      this.mainBox.w * this.mainBox.h / mBoxArea,
-      bGutter,
+      minArea,
+      boxGutter,
     );
 
     const cGrid = this.buildCircleGrid(rGrid);
@@ -89,12 +67,14 @@ class GalleryWall extends React.Component {
     const element = document.getElementsByClassName(`box--${gUnit.id}`)[0];
 
     if(element) {
-      element.style.left = `${gUnit.x}px`;
-      element.style.top = `${gUnit.y}px`;
-      element.style.width = `${gUnit.w}px`;
-      element.style.height = `${gUnit.h}px`;
-      element.style.opacity = 1;
+      element.style.left = `${gUnit.x}%`;
+      element.style.top = `${gUnit.y}%`;
+      element.style.width = `${gUnit.w}%`;
+      element.style.height = `${gUnit.h}%`;
+      element.style.opacity = gUnit.intensity2;
       element.style.backgroundColor = '#555555';
+
+      element.style.border = '1px solid white';
     }
   }
 
@@ -128,32 +108,11 @@ class GalleryWall extends React.Component {
   componentDidMount () {
     const initFunc = this.initializeGrid;
     initFunc();
-
-    ///////////////////////////////////////////////////////////////////////////////
-    //   HANDLING WINDOW RESIZES
-
-    function resizeGrid(evt) {
-      initFunc();
-    };
-    const resizeHandler = evt => {
-      resizeGrid(evt);
-    };
-    const delay = 100;  // Your delay here
-    (() => {
-      let resizeTaskId = null;
-      window.addEventListener('resize', evt => {
-        if (resizeTaskId !== null) {
-          clearTimeout(resizeTaskId);
-        }
-        resizeTaskId = setTimeout(() => {
-          resizeTaskId = null;
-          resizeHandler(evt);
-        }, delay);
-      });
-    })();
   }
 
   componentDidUpdate () {
+    console.log('update', this.bGridRef.current.clientWidth, this.mainBox, this.state)
+
     for(let box of this.state.circleGrid) {
       this.drawBox(box);
     }
