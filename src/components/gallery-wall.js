@@ -1,12 +1,14 @@
 import React from 'react';
-import sample from 'lodash/sample';
 import shuffle from 'lodash/shuffle';
 
 import BrokenGrid from './utils/broken-grid';
 
-const BOX_DIVISION_SCALE = Math.PI * 2;
+const PHI = (Math.sqrt(5) + 1) / 2;
+const BOX_DIVISION_SCALE = Math.PI + PHI;
+
 // root path here == "static" directory
 const GALLERY_DIR = '/gallery-wall/';
+
 // you can print out the image list by running something
 // like  `$ ls static/gallery-wall` on command line
 const GALLERY_IMAGES = [
