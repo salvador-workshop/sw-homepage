@@ -252,6 +252,13 @@ video {
   text-align: left;
 }
 
+.index-gallery-wall {
+  margin-top: var(--space-unit-lg);
+}
+.index-contact {
+  text-align: center;
+}
+
 /*/////  UTILITY CLASSES FOR DEVELOPER CONVENIENCE  /////*/
 
 .util-layout-bg {

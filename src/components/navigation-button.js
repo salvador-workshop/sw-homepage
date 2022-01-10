@@ -1,11 +1,17 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-import iconHome from "../images/icons/linea/basic_home.svg"
-// import iconServices from "../images/icons/linea/basic_gear.svg"
-import iconServices from "../images/icons/linea/basic_settings.svg"
-import iconLight from "../images/icons/feather/sun.svg"
-import iconDark from "../images/icons/feather/moon.svg"
+import SwitchableImage from "./switchable-image"
+
+import iconHome from "../images/icons/toolbar/icon-home-dark.svg"
+import iconServices from "../images/icons/toolbar/icon-services-dark.svg"
+import iconSun from "../images/icons/toolbar/icon-sun-dark.svg"
+import iconMoon from "../images/icons/toolbar/icon-moon-dark.svg"
+
+import iconHomeLight from "../images/icons/toolbar/icon-home-light.svg"
+import iconServicesLight from "../images/icons/toolbar/icon-services-light.svg"
+import iconSunLight from "../images/icons/toolbar/icon-sun-light.svg"
+import iconMoonLight from "../images/icons/toolbar/icon-moon-light.svg"
 
 const getLink = buttonId => {
   const linkMap = {
@@ -20,12 +26,12 @@ const getLink = buttonId => {
   return linkMap[buttonId]
 }
 
-const getIcon = buttonId => {
+const getIcon = (buttonId, isLightUi) => {
   const iconMap = {
-    home: iconHome,
-    services: iconServices,
-    light: iconLight,
-    dark: iconDark,
+    home: isLightUi ? iconHomeLight: iconHome,
+    services: isLightUi ? iconServicesLight: iconServices,
+    light: isLightUi ? iconSunLight: iconSun,
+    dark: isLightUi ? iconMoonLight: iconMoon,
   }
 
   if (!iconMap[buttonId]) {
@@ -50,7 +56,7 @@ const NavigationButton = ({ buttonType, buttonId, isLightUi, isActive, onClick }
             <div className="navigation-icon-wrapper">
               <img
                 className="navigation-icon"
-                src={getIcon(buttonId)}
+                src={getIcon(buttonId, isLightUi)}
                 alt="navigation icon"
               />
             </div>
@@ -68,7 +74,7 @@ const NavigationButton = ({ buttonType, buttonId, isLightUi, isActive, onClick }
           <div className="navigation-icon-wrapper">
             <img
               className="navigation-icon"
-              src={getIcon(buttonId)}
+              src={getIcon(buttonId, isLightUi)}
               alt="navigation icon"
             />
           </div>
