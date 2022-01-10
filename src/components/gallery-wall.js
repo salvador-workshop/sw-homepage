@@ -3,8 +3,9 @@ import shuffle from 'lodash/shuffle';
 
 import BrokenGrid from './utils/broken-grid';
 
-const PHI = (Math.sqrt(5) + 1) / 2;
-const BOX_DIVISION_SCALE = Math.PI + PHI;
+// const PHI = (Math.sqrt(5) + 1) / 2;
+// const BOX_DIVISION_SCALE = Math.PI + PHI;
+const BOX_DIVISION_SCALE = Math.PI * 2;
 
 // root path here == "static" directory
 const GALLERY_DIR = '/gallery-wall/';
@@ -12,30 +13,25 @@ const GALLERY_DIR = '/gallery-wall/';
 // you can print out the image list by running something
 // like  `$ ls static/gallery-wall` on command line
 const GALLERY_IMAGES = [
-  '0d0762ccffa762d3bf5d1514f545fb3de.png',
-  '2a456e27370a062cb671e755f5adaf5a6.png',
-  'a87aca142038b314b00aec467c87d0481.jpg',
-  'dd52ec2ffecce787081d11060fde74e46.png',
-  '130027fd1bfda16a42c8fbf51a1f3f730.png',
-  '5831caabac44e34fcc3a1521ae58372c0.png',
-  'b420bfc6e6b8f7fcb8e0747bf3a20fd37.jpg',
-  'df1fc71a04433cbb6f51e137785271131.png',
-  '15420e34045776146f67c2f271d747fdf.png',
-  '70ffcaf73c447712b620653e80adf6dc0.jpg',
-  'b7e741b8df316fbd146b31fe3820a3cc5.jpg',
-  'e53f6a5b04cc6852cbceda5530cb8b7db.jpg',
-  '15f24dc085d38a7dc330c670374d71b5e.jpg',
-  '776c0a484f18c8eda452a0d1f4df6abc8.jpg',
-  'bff158eaf7504ba8850ffdea74073ce68.png',
-  'ea4e38823df3cc65e3e757ce7f4a7f223.jpg',
-  '267055b34ba125e252e87028bb4dec10e.png',
-  '8456edc2f4ac21ca554e704452a7f6d46.jpg',
-  'c20c6762235aa072372c2ab5b058b2672.png',
-  'f7dbfeeecfc880b8631152c7eebe70eeb.jpg',
-  '26b00ec03cadcf58ad7ebff54c7ef1aa5.png',
-  'a4be2d0ea2c014e608bc838fb48a581f1.jpg',
-  'd5fbfe756dc7d7ac447487c03bfc61a66.jpg',
-  'fe7a6e8a27b66e4525d6316ebcaa20c53.png',
+  '02f8432ef8475340c58b33f8f0bbc477e.jpg',
+  '133c14c0d3034ba6a70bf4c84d3b547fa.jpg',
+  '26b315827848563d0ed73e6c02d20c3b5.jpg',
+  '27d5e7b1e5e561565e128eda564164763.jpg',
+  '3d6263882434a23174f3a4d88d810c5f3.png',
+  '62a66464b10a40df44dc7fff60e011b56.jpg',
+  '66d1c5762f0cc15e1de0536130dbb425a.png',
+  '7f123ede1a4eeab553c53d70ce5db5357.png',
+  '87befdbfa2b58f87cdbc7a41b0e2ac507.jpg',
+  'a3bafaad75b1e3a103bde3343d7618658.png',
+  'b3221cfc70614681effacbe4da1c34271.jpg',
+  'b57cdecc0a6f2aa582f260ae7f03c2d68.jpg',
+  'b6084db4fb3361687f3ebc0d48a885f43.jpg',
+  'b63780d46021c8552633360d48000d204.png',
+  'cc35333d7b3c1f83a10d057863341208e.png',
+  'd2101fb8ae76f6ced3aa3b25c7eedc778.jpg',
+  'd22214da0b7674113840ccef0daa5e26c.png',
+  'ee4fcd2f8af76d37c21d4411078ecac0f.jpg',
+  'feba1f0b02364d86e7212a7d3d872f664.jpg',
 ]
 
 const shuffledGalleryImages = shuffle(GALLERY_IMAGES);
@@ -122,13 +118,15 @@ class GalleryWall extends React.Component {
     const element = document.getElementsByClassName(`box--${gUnit.id}`)[0];
 
     if(element) {
+      const bgCol = '#030D4F';
+
       element.style.left = `${gUnit.x}%`;
       element.style.top = `${gUnit.y}%`;
       element.style.width = `${gUnit.w}%`;
       element.style.height = `${gUnit.h}%`;
-      element.style.backgroundColor = '#555555';
-      element.style.border = '1px solid white';
-
+      element.style.border = `4px solid ${bgCol}`;
+      
+      element.style.backgroundColor = bgCol;
       element.style.backgroundPosition = 'center';
       element.style.backgroundSize = 'cover';
       element.style.backgroundRepeat = 'no-repeat';
