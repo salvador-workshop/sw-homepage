@@ -1,8 +1,15 @@
 
+.main-layout.dark-ui > .header,
+.main-layout.dark-ui > .footer {
+  --img-header-bg: url("../images/backgrounds/header-bg-dark.png");
+}
+.main-layout.light-ui > .header,
+.main-layout.light-ui > .footer {
+  --img-header-bg: url("../images/backgrounds/header-bg-light.png");
+}
+
 .main-layout > .header {
-  /* margin-bottom: var(--space-unit); */
-  background-color: var(--color-bg-blastoise);
-  background-image: url("../images/backgrounds/noisy-grid-dark.png");
+  background-image: var(--img-header-bg);
   background-repeat: repeat;
   border-bottom: var(--basic-line);
 }
@@ -55,8 +62,7 @@
 
 .main-layout > .footer {
   padding: 0 0 1px 0;
-  background-color: var(--color-bg-blastoise);
-  background-image: url("../images/backgrounds/noisy-grid-dark.png");
+  background-image: var(--img-header-bg);
   background-repeat: repeat;
   border-top: var(--basic-line);
   position: relative;
@@ -71,7 +77,6 @@
 }
 .footer .footer-text {
   font-size: var(--text-size-sm);
-  /* line-height: 1; */
   letter-spacing: 1.25px;
   margin: var(--space-unit-6q) 0;
 }
