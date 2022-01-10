@@ -1,6 +1,6 @@
 .gallery-wall-container {
   --gallery-border-width: 2px;
-  --gallery-border-colour: var(--color-highlight2);
+  --gallery-border-colour: var(--color-body);
 
   position: relative;
   border: var(--gallery-border-width) solid var(--gallery-border-colour);

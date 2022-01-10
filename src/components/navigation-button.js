@@ -30,8 +30,8 @@ const getIcon = (buttonId, isLightUi) => {
   const iconMap = {
     home: isLightUi ? iconHomeLight: iconHome,
     services: isLightUi ? iconServicesLight: iconServices,
-    light: isLightUi ? iconSunLight: iconSun,
-    dark: isLightUi ? iconMoonLight: iconMoon,
+    dark: isLightUi ? iconSunLight: iconSun,
+    light: isLightUi ? iconMoonLight: iconMoon,
   }
 
   if (!iconMap[buttonId]) {
