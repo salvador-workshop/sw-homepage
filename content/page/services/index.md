@@ -31,6 +31,8 @@ A set of graphics for an online media page. Start or refresh your online visual 
 - Bandcamp
 - Soundcloud
 
+![Brand Style Guide - Demo](styleguide-demo.png)
+
 ### Online marketing campaign
 
 A set of graphics for online advertising.
@@ -43,6 +45,8 @@ A logo consisting of graphics and a wordmark.
 
 - Standard: 3.5" x 2"
 - Square: 2.5" x 2.5"
+
+<!--
 
 ---
 
@@ -61,3 +65,5 @@ Brand style guides are documents that specify and establish visual standards for
 ![Brand Style Guide - Demo](styleguide-demo.png)
 
 Style guides are also handy as documentation. For example, a style spec gives future designers an easier time with updating your brand by giving them context for design decisions.
+
+-->
