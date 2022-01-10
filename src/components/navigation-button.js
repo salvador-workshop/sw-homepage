@@ -35,13 +35,17 @@ const getIcon = buttonId => {
   return iconMap[buttonId]
 }
 
-const NavigationButton = ({ buttonType, buttonId, isActive, onClick }) => {
+const NavigationButton = ({ buttonType, buttonId, isLightUi, isActive, onClick }) => {
   const activeStatus = isActive ? "active" : "disabled"
 
   if (!!buttonId) {
     if (buttonType === "link") {
       return (
-        <Link to={getLink(buttonId)} itemProp="url" className="navigation-button-link">
+        <Link to={getLink(buttonId)}
+          itemProp="url"
+          className="navigation-button-link"
+          state={{ isLightUi: isLightUi }}
+        >
           <div className={`navigation-button ${activeStatus} ${buttonId} ${buttonType}`}>
             <div className="navigation-icon-wrapper">
               <img

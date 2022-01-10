@@ -11,20 +11,22 @@ class ServicesPage extends React.Component {
     this.data = props.data;
     this.location = props.location;
     this.state = {
-      isLightUi: false,
+      isLightUi: this.location.state?.isLightUi || false,
     }
 
     this.onLightUiChanged = this.onLightUiChanged.bind(this);
+    console.log(props.location, this.state);
   }
 
   onLightUiChanged() {
-    console.log(`onLightUiChanged() ${this.isLightUi} to ${!this.isLightUi}`);
     this.setState(prevState => ({
       isLightUi: !prevState.isLightUi
     }));
+    console.log(`onLightUiChanged() ${this.state.isLightUi} to ${!this.state.isLightUi}`, this.state, this.location);
   }
 
   render() {
+    console.log(this.state, this.location.state, this.location);
     const siteTitle = this.data.site.siteMetadata?.title || `Title`;
     const lightModeClass = this.state.isLightUi ? 'light-ui' : 'dark-ui';
 
