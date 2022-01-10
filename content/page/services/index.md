@@ -19,17 +19,36 @@ If you’re looking for assistance for your front-end dev team, say less! We kno
 
 ---
 
-## Web Design
+## Web & Graphic Design
 
-### Brand styling (online)
+### Brand styling (online media)
 
-A set of graphics for a social media page. Start or refresh your online visual presence on platforms like:
+A set of graphics for an online media page. Start or refresh your online visual presence on platforms like:
 
 - YouTube
 - Facebook
 - Twitch
 - Bandcamp
 - Soundcloud
+
+### Online marketing campaign
+
+A set of graphics for online advertising.
+
+### Logo
+
+A logo consisting of graphics and a wordmark.
+
+### Business cards
+
+- Standard: 3.5" x 2"
+- Square: 2.5" x 2.5"
+
+---
+
+## Technical Graphics Support
+
+For the professionals and power users.
 
 ### Brand asset formatting
 
@@ -41,25 +60,4 @@ Brand style guides are documents that specify and establish visual standards for
 
 ![Brand Style Guide - Demo](styleguide-demo.png)
 
-Getting one is useful if you’re ok with applying the styling yourself, or know someone who can. Style guides are also handy as documentation. For example, a style spec gives future designers an easier time with updating your brand by giving them context for design decisions.
-
----
-
-## Graphic Design
-
-### Logo
-
-A logo consisting of graphics and a wordmark.
-
-### Business cards
-
-- Standard: 3.5" x 2"
-- Square: 2.5" x 2.5"
-
-### Posters
-
-Posters for advertisments, events, etc.
-
-### Album covers
-
-Musical album covers, for print and digital distribution. Delivered as PDF and PNG
+Style guides are also handy as documentation. For example, a style spec gives future designers an easier time with updating your brand by giving them context for design decisions.
