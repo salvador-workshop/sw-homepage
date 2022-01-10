@@ -104,7 +104,7 @@ nav.blog-post-nav {
 }
 .blog-post .blog-post-title {
   letter-spacing: var(--main-title-spacing);
-  color: var(--color-highlight1-sw);
+  color: var(--color-highlight1);
   margin-bottom: var(--space-unit-xs);
 }
 .blog-post .blog-post-details {
@@ -126,7 +126,7 @@ nav.blog-post-nav {
 }
 
 .blog-post-nav .blog-post-nav-links {
-  color: var(--color-highlight1-sw);
+  color: var(--color-highlight1);
   text-decoration: none;
 }
 
@@ -135,7 +135,7 @@ article.blog-post img {
 }
 
 a {
-  color: var(--color-highlight1-sw);
+  color: var(--color-highlight1);
 }
 
 video {
