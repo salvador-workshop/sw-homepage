@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import SwitchableImage from "../components/switchable-image"
 
 class ServicesPage extends React.Component {
   constructor(props) {
@@ -35,9 +36,11 @@ class ServicesPage extends React.Component {
         <Seo title="Services" />
         <div className="page-container">
           <div className="ornament-border top">
-            <img
+            <SwitchableImage
               className="ornament-img"
-              src="/ornaments/services-top-dark.png"
+              darkImgPath="/ornaments/services-top-dark.png"
+              lightImgPath="/ornaments/services-top.png"
+              isLightUi={this.state.isLightUi}
               alt="ornament: services top border"
             />
           </div>
