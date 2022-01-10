@@ -46,9 +46,11 @@ class ServicesPage extends React.Component {
           </div>
           <MDXRenderer>{this.data.allMdx.nodes[0].body}</MDXRenderer>
           <div className="ornament-border bottom">
-            <img
+          <SwitchableImage
               className="ornament-img"
-              src="/ornaments/services-bottom-dark.png"
+              darkImgPath="/ornaments/services-bottom-dark.png"
+              lightImgPath="/ornaments/services-bottom.png"
+              isLightUi={this.state.isLightUi}
               alt="ornament: services bottom border"
             />
           </div>

@@ -41,7 +41,7 @@ overrides the 1st layer from "style.css".
   --color-bg-sw-light: #FCF2DA;
   --color-body-sw-light: #322928;
   --color-highlight1-sw-light: #EE4603;
-  --color-highlight1-sw-light: #061999;
+  --color-highlight2-sw-light: #061999;
 
   --space-unit: 24px;
   --space-unit-3q: calc(var(--space-unit) * 0.75);
@@ -150,11 +150,6 @@ video {
   width: 100%;
 }
 
-hr {
-  margin-top: var(--space-unit-lg);
-  margin-bottom: var(--space-unit-lg);
-}
-
 .page-layout.dark-ui {
   --color-header: var(--color-header-sw);
   --color-post-content: var(--color-post-content-sw);
@@ -170,7 +165,7 @@ hr {
   --color-bg: var(--color-bg-sw-light);
   --color-body: var(--color-body-sw-light);
   --color-highlight1: var(--color-highlight1-sw-light);
-  --color-highlight2: var(--color-highlight1-sw-light);
+  --color-highlight2: var(--color-highlight2-sw-light);
 }
 
 .page-layout h1,
@@ -181,7 +176,7 @@ hr {
 .page-layout h1,
 .page-layout h2,
 .page-layout h3 {
-  color: var(--color-highlight1);
+  color: var(--color-highlight2);
   letter-spacing: var(--heading-spacing);
 }
 
@@ -198,7 +193,7 @@ hr {
 }
 .page-layout h1:first-of-type {
   letter-spacing: var(--main-title-spacing);
-  color: white;
+  color: var(--color-highlight1);
   padding-top: var(--space-unit-sm);
 }
 .page-layout .page-container {
@@ -206,6 +201,13 @@ hr {
 }
 .page-layout .page-container h1:first-of-type {
   margin-top: 0;
+}
+
+.page-layout hr {
+  margin-top: var(--space-unit-lg);
+  margin-bottom: var(--space-unit-lg);
+  border-color: var(--color-highlight1);
+  background-color: var(--color-highlight1);
 }
 
 .main-layout {
