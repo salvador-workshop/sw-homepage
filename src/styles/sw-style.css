@@ -134,6 +134,11 @@ article.blog-post img {
   max-width: 100%;
 }
 
+ul,
+ol {
+  list-style-position: inside;
+}
+
 a {
   color: var(--color-highlight1);
 }
