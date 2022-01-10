@@ -56,7 +56,6 @@ const getGalleryImgIndex = () => {
   } else {
     galleryImgCounter = nextCounter;
   }
-  console.log('img index', currentCounter);
   return currentCounter;
 }
 

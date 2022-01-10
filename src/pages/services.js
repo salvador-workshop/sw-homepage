@@ -5,31 +5,39 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const ServicesPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+class ServicesPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.data = props.data;
+    this.location = props.location;
+  }
 
-  return (
-    <Layout location={location} title={siteTitle} className="page-layout services-layout">
-      <Seo title="Services" />
-      <div className="page-container">
-        <div className="ornament-border top">
-          <img
-            className="ornament-img"
-            src="/ornaments/services-top-dark.png"
-            alt="ornament: services top border"
-          />
+  render() {
+    const siteTitle = this.data.site.siteMetadata.title
+
+    return (
+      <Layout location={this.location} title={siteTitle} className="page-layout services-layout">
+        <Seo title="Services" />
+        <div className="page-container">
+          <div className="ornament-border top">
+            <img
+              className="ornament-img"
+              src="/ornaments/services-top-dark.png"
+              alt="ornament: services top border"
+            />
+          </div>
+          <MDXRenderer>{this.data.allMdx.nodes[0].body}</MDXRenderer>
+          <div className="ornament-border bottom">
+            <img
+              className="ornament-img"
+              src="/ornaments/services-bottom-dark.png"
+              alt="ornament: services bottom border"
+            />
+          </div>
         </div>
-        <MDXRenderer>{data.allMdx.nodes[0].body}</MDXRenderer>
-        <div className="ornament-border bottom">
-          <img
-            className="ornament-img"
-            src="/ornaments/services-bottom-dark.png"
-            alt="ornament: services bottom border"
-          />
-        </div>
-      </div>
-    </Layout>
-  )
+      </Layout>
+    )
+  }
 }
 
 export default ServicesPage

@@ -7,7 +7,11 @@ const Layout = ({ location, title, children, className, isPost }) => {
   const isRootPath = location.pathname === rootPath
   const isLightUi = false;
 
-  // console.log(location, title, children, className)
+  const onLightUiChanged = () => {
+    console.log('onLightUiChanged()');
+    return 0
+  };
+
   const cName = className ? className : '';
 
   return (
@@ -18,7 +22,7 @@ const Layout = ({ location, title, children, className, isPost }) => {
       </div>
 
       <div className={`main-layout ${cName}`}>
-        <Header isHome={isRootPath} isPost={isPost} isLightUi={isLightUi}/>
+        <Header isHome={isRootPath} isPost={isPost} isLightUi={isLightUi} onLightUiChanged={onLightUiChanged}/>
         <div className="main-wrapper">
           <main className="main-container">
             {children}

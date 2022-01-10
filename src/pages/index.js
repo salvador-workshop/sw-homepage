@@ -5,38 +5,45 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const HomepageIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+class HomepageIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.data = props.data;
+    this.location = props.location;
+  }
 
-  return (
-    <Layout location={location} title={siteTitle} className="page-layout home-layout">
-      <Seo title="Home" />
-      <div className="page-container">
-        <div className="ornament-border top homepage">
-          <img
-            className="ornament-img"
-            src="/ornaments/home-top-dark.png"
-            alt="ornament: home top border"
-          />
+  render() {
+    const siteTitle = this.data.site.siteMetadata?.title || `Title`
+    return (
+      <Layout location={this.location} title={siteTitle} className="page-layout home-layout">
+        <Seo title="Home" />
+        <div className="page-container">
+          <div className="ornament-border top homepage">
+            <img
+              className="ornament-img"
+              src="/ornaments/home-top-dark.png"
+              alt="ornament: home top border"
+            />
+          </div>
+          <div className="hero-img-container">
+            <img
+              className="hero-img"
+              src="/full-dark.png"
+              alt="hero"
+            />
+          </div>
+          <MDXRenderer>{this.data.allMdx.nodes[0].body}</MDXRenderer>
+          <div className="ornament-border bottom">
+            <img
+              className="ornament-img"
+              src="/ornaments/home-bottom-dark.png"
+              alt="ornament: home bottom border"
+            />
+          </div>
         </div>
-        <div className="hero-img-container">
-          <img
-            className="hero-img"
-            src="/full-dark.png"
-            alt="hero"
-          />
-        </div>
-        <MDXRenderer>{data.allMdx.nodes[0].body}</MDXRenderer>
-        <div className="ornament-border bottom">
-          <img
-            className="ornament-img"
-            src="/ornaments/home-bottom-dark.png"
-            alt="ornament: home bottom border"
-          />
-        </div>
-      </div>
-    </Layout>
-  )
+      </Layout>
+    )
+  }
 }
 
 export default HomepageIndex

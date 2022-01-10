@@ -35,7 +35,7 @@ const getIcon = buttonId => {
   return iconMap[buttonId]
 }
 
-const NavigationButton = ({ buttonType, buttonId, isActive }) => {
+const NavigationButton = ({ buttonType, buttonId, isActive, onClick }) => {
   const activeStatus = isActive ? "active" : "disabled"
 
   if (!!buttonId) {
@@ -60,7 +60,7 @@ const NavigationButton = ({ buttonType, buttonId, isActive }) => {
       const tempActiveStatus = 'disabled';
 
       return (
-        <div className={`navigation-button ${tempActiveStatus}`}>
+        <div className={`navigation-button ${tempActiveStatus}`} onClick={onClick} role="switch">
           <div className="navigation-icon-wrapper">
             <img
               className="navigation-icon"
