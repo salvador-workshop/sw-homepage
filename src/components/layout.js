@@ -2,15 +2,16 @@ import * as React from "react"
 import Header from "./header"
 import Footer from "./footer"
 
-const Layout = ({ location, title, children, className, isPost }) => {
+const Layout = ({ location, title, children, className, isPost, isLightUi, onLightUiChanged }) => {
+  console.log(isLightUi, onLightUiChanged);
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  const isLightUi = false;
+  // const isLightUi = false;
 
-  const onLightUiChanged = () => {
-    console.log('onLightUiChanged()');
-    return 0
-  };
+  // const onLightUiChanged = () => {
+  //   console.log('onLightUiChanged()');
+  //   return 0
+  // };
 
   const cName = className ? className : '';
 

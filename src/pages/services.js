@@ -10,13 +10,26 @@ class ServicesPage extends React.Component {
     super(props);
     this.data = props.data;
     this.location = props.location;
+    this.state = {
+      isLightUi: false,
+    }
+
+    this.onLightUiChanged = this.onLightUiChanged.bind(this);
+  }
+
+  onLightUiChanged() {
+    console.log(`onLightUiChanged() ${this.isLightUi} to ${!this.isLightUi}`);
+    this.setState(prevState => ({
+      isLightUi: !prevState.isLightUi
+    }));
   }
 
   render() {
-    const siteTitle = this.data.site.siteMetadata.title
+    const siteTitle = this.data.site.siteMetadata?.title || `Title`;
+    const lightModeClass = this.state.isLightUi ? 'light-ui' : 'dark-ui';
 
     return (
-      <Layout location={this.location} title={siteTitle} className="page-layout services-layout">
+      <Layout location={this.location} title={siteTitle} className={`page-layout home-layout ${lightModeClass}`} isLightUi={this.state.isLightUi} onLightUiChanged={this.onLightUiChanged}>
         <Seo title="Services" />
         <div className="page-container">
           <div className="ornament-border top">

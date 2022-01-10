@@ -42,7 +42,7 @@ const NavigationButton = ({ buttonType, buttonId, isActive, onClick }) => {
     if (buttonType === "link") {
       return (
         <Link to={getLink(buttonId)} itemProp="url" className="navigation-button-link">
-          <div className={`navigation-button ${activeStatus}`}>
+          <div className={`navigation-button ${activeStatus} ${buttonId} ${buttonType}`}>
             <div className="navigation-icon-wrapper">
               <img
                 className="navigation-icon"
@@ -57,10 +57,10 @@ const NavigationButton = ({ buttonType, buttonId, isActive, onClick }) => {
 
     if (buttonType === "ui") {
       // TODO - remove this override when light switching is implemented
-      const tempActiveStatus = 'disabled';
+      // const tempActiveStatus = 'disabled';
 
       return (
-        <div className={`navigation-button ${tempActiveStatus}`} onClick={onClick} role="switch">
+        <div className={`navigation-button ${activeStatus} ${buttonId} ${buttonType}`} onClick={onClick} role="switch">
           <div className="navigation-icon-wrapper">
             <img
               className="navigation-icon"
