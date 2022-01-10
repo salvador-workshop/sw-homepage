@@ -31,15 +31,17 @@ overrides the 1st layer from "style.css".
   /*/////  CUSTOM VARIABLES  /////*/
   --color-header-sw: rgba(0, 0, 0, 0.25);
   --color-post-content-sw: rgba(74, 74, 74, 0.94);
+  --color-bg-sw: #030D4F;
+  --color-body-sw: #FFFFFF;
   --color-highlight1-sw: #FDC95C;
   --color-highlight2-sw: #FC8352;
-  --color-bg-sw: #030D4F;
 
   --color-header-sw-light: rgba(0, 0, 0, 0.25);
   --color-post-content-sw-light: rgba(74, 74, 74, 0.94);
+  --color-bg-sw-light: #FCF2DA;
+  --color-body-sw-light: #322928;
   --color-highlight1-sw-light: #EE4603;
   --color-highlight1-sw-light: #061999;
-  --color-bg-sw-light: #FCF2DA;
 
   --space-unit: 24px;
   --space-unit-3q: calc(var(--space-unit) * 0.75);
@@ -143,20 +145,6 @@ video {
 
 /*/////  CUSTOM CLASSES  /////*/
 
-.main-layout {
-  padding: 0;
-  margin: 0;
-  background-color: var(--color-bg-sw);
-  color: #FFFFFF;
-}
-
-.main-container {
-  max-width: var(--max-width-xs);
-  min-height: 80vh;
-  margin: 0 auto;
-  padding: 0 var(--space-unit);
-}
-
 .hero-img,
 .ornament-img {
   width: 100%;
@@ -167,19 +155,23 @@ hr {
   margin-bottom: var(--space-unit-lg);
 }
 
-.ornament-border.top {
-  margin-top: calc(var(--space-unit) * 1.5);
-  margin-bottom: calc(var(--space-unit) * 1.5);
-}
-.ornament-border.top.homepage {
-  margin-bottom: calc(var(--space-unit) * 1);
-}
-.ornament-border.bottom {
-  margin-top: calc(var(--space-unit) * 2);
-  margin-bottom: calc(var(--space-unit) * 2);
+.page-layout.dark-ui {
+  --color-header: var(--color-header-sw);
+  --color-post-content: var(--color-post-content-sw);
+  --color-bg: var(--color-bg-sw);
+  --color-body: var(--color-body-sw);
+  --color-highlight1: var(--color-highlight1-sw);
+  --color-highlight2: var(--color-highlight2-sw);
 }
 
-
+.page-layout.light-ui {
+  --color-header: var(--color-header-sw-light);
+  --color-post-content: var(--color-post-content-sw-light);
+  --color-bg: var(--color-bg-sw-light);
+  --color-body: var(--color-body-sw-light);
+  --color-highlight1: var(--color-highlight1-sw-light);
+  --color-highlight2: var(--color-highlight1-sw-light);
+}
 
 .page-layout h1,
 .page-layout h2 {
@@ -189,7 +181,7 @@ hr {
 .page-layout h1,
 .page-layout h2,
 .page-layout h3 {
-  color: var(--color-highlight1-sw);
+  color: var(--color-highlight1);
   letter-spacing: var(--heading-spacing);
 }
 
@@ -214,6 +206,32 @@ hr {
 }
 .page-layout .page-container h1:first-of-type {
   margin-top: 0;
+}
+
+.main-layout {
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-body);
+}
+
+.main-container {
+  max-width: var(--max-width-xs);
+  min-height: 80vh;
+  margin: 0 auto;
+  padding: 0 var(--space-unit);
+}
+
+.ornament-border.top {
+  margin-top: calc(var(--space-unit) * 1.5);
+  margin-bottom: calc(var(--space-unit) * 1.5);
+}
+.ornament-border.top.homepage {
+  margin-bottom: calc(var(--space-unit) * 1);
+}
+.ornament-border.bottom {
+  margin-top: calc(var(--space-unit) * 2);
+  margin-bottom: calc(var(--space-unit) * 2);
 }
 
 .text-spacer {
