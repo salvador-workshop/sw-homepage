@@ -17,3 +17,8 @@
   width: var(--toolbar-button-width);
   height: var(--toolbar-button-width);
 }
+
+.navigation-button.ui.light,
+.navigation-button.ui.dark {
+  opacity: 0.75;
+}

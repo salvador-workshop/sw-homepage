@@ -7,11 +7,11 @@ import NavigationButton from './navigation-button';
 const switchUiButton = (isLightUi, onLightUiChanged) => {
   if (isLightUi) {
     return (
-      <NavigationButton buttonId="light" buttonType="ui" isActive={isLightUi} onClick={onLightUiChanged}/>
+      <NavigationButton buttonId="light" buttonType="ui" isLightUi={isLightUi} isActive={isLightUi} onClick={onLightUiChanged}/>
     );
   }
   return (
-    <NavigationButton buttonId="dark" buttonType="ui" isActive={!isLightUi} onClick={onLightUiChanged} />
+    <NavigationButton buttonId="dark" buttonType="ui" isLightUi={isLightUi} isActive={!isLightUi} onClick={onLightUiChanged} />
   );
 };
 
@@ -22,10 +22,12 @@ const NavigationToolbar = ({isLightUi, onLightUiChanged}) => {
         <NavigationButton
           buttonId="home"
           buttonType="link"
+          isLightUi={isLightUi}
           isActive={true} />
         <NavigationButton
           buttonId="services"
           buttonType="link"
+          isLightUi={isLightUi}
           isActive={true}
         />
         { switchUiButton(isLightUi, onLightUiChanged) }

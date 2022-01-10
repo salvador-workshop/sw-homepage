@@ -118,18 +118,10 @@ class GalleryWall extends React.Component {
     const element = document.getElementsByClassName(`box--${gUnit.id}`)[0];
 
     if(element) {
-      const bgCol = '#030D4F';
-
       element.style.left = `${gUnit.x}%`;
       element.style.top = `${gUnit.y}%`;
       element.style.width = `${gUnit.w}%`;
       element.style.height = `${gUnit.h}%`;
-      element.style.border = `4px solid ${bgCol}`;
-      
-      element.style.backgroundColor = bgCol;
-      element.style.backgroundPosition = 'center';
-      element.style.backgroundSize = 'cover';
-      element.style.backgroundRepeat = 'no-repeat';
 
       const img = shuffledGalleryImages[getGalleryImgIndex()];
       const imgPath = `${GALLERY_DIR}${img}`;

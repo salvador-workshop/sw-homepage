@@ -31,15 +31,17 @@ overrides the 1st layer from "style.css".
   /*/////  CUSTOM VARIABLES  /////*/
   --color-header-sw: rgba(0, 0, 0, 0.25);
   --color-post-content-sw: rgba(74, 74, 74, 0.94);
+  --color-bg-sw: #030D4F;
+  --color-body-sw: #FFFFFF;
   --color-highlight1-sw: #FDC95C;
   --color-highlight2-sw: #FC8352;
-  --color-bg-sw: #030D4F;
 
   --color-header-sw-light: rgba(0, 0, 0, 0.25);
   --color-post-content-sw-light: rgba(74, 74, 74, 0.94);
-  --color-highlight1-sw-light: #EE4603;
-  --color-highlight1-sw-light: #061999;
   --color-bg-sw-light: #FCF2DA;
+  --color-body-sw-light: #322928;
+  --color-highlight1-sw-light: #EE4603;
+  --color-highlight2-sw-light: #061999;
 
   --space-unit: 24px;
   --space-unit-3q: calc(var(--space-unit) * 0.75);
@@ -102,7 +104,7 @@ nav.blog-post-nav {
 }
 .blog-post .blog-post-title {
   letter-spacing: var(--main-title-spacing);
-  color: var(--color-highlight1-sw);
+  color: var(--color-highlight1);
   margin-bottom: var(--space-unit-xs);
 }
 .blog-post .blog-post-details {
@@ -124,7 +126,7 @@ nav.blog-post-nav {
 }
 
 .blog-post-nav .blog-post-nav-links {
-  color: var(--color-highlight1-sw);
+  color: var(--color-highlight1);
   text-decoration: none;
 }
 
@@ -133,7 +135,7 @@ article.blog-post img {
 }
 
 a {
-  color: var(--color-highlight1-sw);
+  color: var(--color-highlight1);
 }
 
 video {
@@ -143,43 +145,28 @@ video {
 
 /*/////  CUSTOM CLASSES  /////*/
 
-.main-layout {
-  padding: 0;
-  margin: 0;
-  background-color: var(--color-bg-sw);
-  color: #FFFFFF;
-}
-
-.main-container {
-  max-width: var(--max-width-xs);
-  min-height: 80vh;
-  margin: 0 auto;
-  padding: 0 var(--space-unit);
-}
-
 .hero-img,
 .ornament-img {
   width: 100%;
 }
 
-hr {
-  margin-top: var(--space-unit-lg);
-  margin-bottom: var(--space-unit-lg);
+.page-layout.dark-ui {
+  --color-header: var(--color-header-sw);
+  --color-post-content: var(--color-post-content-sw);
+  --color-bg: var(--color-bg-sw);
+  --color-body: var(--color-body-sw);
+  --color-highlight1: var(--color-highlight1-sw);
+  --color-highlight2: var(--color-highlight2-sw);
 }
 
-.ornament-border.top {
-  margin-top: calc(var(--space-unit) * 1.5);
-  margin-bottom: calc(var(--space-unit) * 1.5);
+.page-layout.light-ui {
+  --color-header: var(--color-header-sw-light);
+  --color-post-content: var(--color-post-content-sw-light);
+  --color-bg: var(--color-bg-sw-light);
+  --color-body: var(--color-body-sw-light);
+  --color-highlight1: var(--color-highlight1-sw-light);
+  --color-highlight2: var(--color-highlight2-sw-light);
 }
-.ornament-border.top.homepage {
-  margin-bottom: calc(var(--space-unit) * 1);
-}
-.ornament-border.bottom {
-  margin-top: calc(var(--space-unit) * 2);
-  margin-bottom: calc(var(--space-unit) * 2);
-}
-
-
 
 .page-layout h1,
 .page-layout h2 {
@@ -189,7 +176,7 @@ hr {
 .page-layout h1,
 .page-layout h2,
 .page-layout h3 {
-  color: var(--color-highlight1-sw);
+  color: var(--color-highlight2);
   letter-spacing: var(--heading-spacing);
 }
 
@@ -206,7 +193,7 @@ hr {
 }
 .page-layout h1:first-of-type {
   letter-spacing: var(--main-title-spacing);
-  color: white;
+  color: var(--color-highlight1);
   padding-top: var(--space-unit-sm);
 }
 .page-layout .page-container {
@@ -214,6 +201,39 @@ hr {
 }
 .page-layout .page-container h1:first-of-type {
   margin-top: 0;
+}
+
+.page-layout hr {
+  margin-top: var(--space-unit-lg);
+  margin-bottom: var(--space-unit-lg);
+  border-color: var(--color-highlight1);
+  background-color: var(--color-highlight1);
+}
+
+.main-layout {
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-body);
+}
+
+.main-container {
+  max-width: var(--max-width-xs);
+  min-height: 80vh;
+  margin: 0 auto;
+  padding: 0 var(--space-unit);
+}
+
+.ornament-border.top {
+  margin-top: calc(var(--space-unit) * 1.5);
+  margin-bottom: calc(var(--space-unit) * 1.5);
+}
+.ornament-border.top.homepage {
+  margin-bottom: calc(var(--space-unit) * 1);
+}
+.ornament-border.bottom {
+  margin-top: calc(var(--space-unit) * 2);
+  margin-bottom: calc(var(--space-unit) * 2);
 }
 
 .text-spacer {
@@ -230,6 +250,13 @@ hr {
 
 .services-layout .gatsby-resp-image-wrapper {
   text-align: left;
+}
+
+.index-gallery-wall {
+  margin-top: var(--space-unit-lg);
+}
+.index-contact {
+  text-align: center;
 }
 
 /*/////  UTILITY CLASSES FOR DEVELOPER CONVENIENCE  /////*/
